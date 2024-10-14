@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Программирование контроллеров АСУ ТП</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hero">
+        <div class="overlay"></div>
+        <div class="container">
+            <h1>Услуги программирования контроллеров АСУ ТП</h1>
+            <p>Мы профессионально программируем промышленные контроллеры для автоматизированных систем управления технологическими процессами (АСУ ТП).</p>
+            <a href="#contact" class="btn-primary">Связаться с нами</a>
+        </div>
+    </header>
+
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Наши услуги</h2>
+            <div class="services-list">
+                <div class="service">
+                    <img src="{{ url_for('static', filename='images/plc-programming.jpg') }}" alt="Программирование ПЛК">
+                    <h3>Программирование ПЛК</h3>
+                    <p>Программирование контроллеров Siemens, Allen Bradley, Schneider Electric и других брендов.</p>
+                </div>
+                <div class="service">
+                    <img src="{{ url_for('static', filename='images/scada-system.jpg') }}" alt="Создание SCADA-систем">
+                    <h3>Создание SCADA-систем</h3>
+                    <p>Разработка систем визуализации и мониторинга производственных процессов.</p>
+                </div>
+                <div class="service">
+                    <img src="{{ url_for('static', filename='images/maintenance.jpg') }}" alt="Техническое обслуживание">
+                    <h3>Техническое обслуживание</h3>
+                    <p>Диагностика, настройка и поддержка существующих систем АСУ ТП.</p>
+                </div>
+                <div class="service">
+                    <img src="{{ url_for('static', filename='images/training.jpg') }}" alt="Обучение персонала">
+                    <h3>Обучение персонала</h3>
+                    <p>Профессиональное обучение по работе с системами автоматизации.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Свяжитесь с нами</h2>
+            <form action="/submit" method="POST">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Сообщение:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit" class="btn-primary">Отправить заявку</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Программирование АСУ ТП | Все права защищены</p>
+        </div>
+    </footer>
+</body>
+</html>
