@@ -8,7 +8,6 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-
 # Маршрут для обработки данных формы (например, заявка от клиента)
 @app.route('/submit', methods=['POST'])
 def submit():

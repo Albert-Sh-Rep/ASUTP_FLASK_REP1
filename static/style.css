@@ -15,7 +15,10 @@ body {
 
 /* Хедер с фоновым изображением */
 .hero {
-    background: url('{{ url_for("static", filename="images/automation-bg.jpg") }}') no-repeat center center/cover;
+    background-image: url('/static/images/automation-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     height: 100vh;
     display: flex;
     align-items: center;
