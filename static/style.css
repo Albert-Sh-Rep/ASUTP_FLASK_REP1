@@ -9,7 +9,7 @@ body {
 
 .container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 990px;
     margin: 0 auto;
 }
 
@@ -17,7 +17,7 @@ body {
 .hero {
     background-image: url('/static/images/automation-bg.jpg');
     background-size: cover;
-    background-position: center;
+/*    background-position: center;*/
     background-repeat: no-repeat;
     height: 100vh;
     display: flex;
@@ -40,6 +40,7 @@ body {
 .hero .container {
     text-align: center;
     z-index: 2;
+    transform: translateY(-310px); /* смещение вверх на 300px*/
 }
 
 .hero h1 {
@@ -48,19 +49,19 @@ body {
 }
 
 .hero p {
-    font-size: 1.2em;
+    font-size: 2em;
     margin-top: 10px;
 }
 
 .btn-primary {
     background-color: #4CAF50;
     color: white;
-    padding: 15px 30px;
+    padding: 25px 50px;
     border: none;
     cursor: pointer;
     text-transform: uppercase;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 8px;
     text-decoration: none;
     margin-top: 20px;
 }
@@ -178,4 +179,31 @@ footer {
     color: white;
     padding: 20px 0;
     text-align: center;
+}
+
+/* Логотип */
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    width: auto;           /* Убираем любые ограничения по ширине */
+    height: auto;          /* Убираем любые ограничения по высоте */
+    max-width: none;       /* Отменяем ограничения максимальной ширины */
+    max-height: none;      /* Отменяем ограничения максимальной высоты */
+    overflow: visible;     /* Отключаем скрытие содержимого */
+}
+
+.logo img {
+    width: 150px; /* Задайте нужный размер логотипа */
+    height: auto;
+    max-width: 100%;       /* Устанавливаем максимальную ширину для адаптивности */
+    max-height: 100%;      /* Устанавливаем максимальную высоту */
+    object-fit: contain;   /* Обеспечиваем, что изображение полностью помещается в контейнер */
+    display: block;        /* Убираем возможные отступы */
+}
+
+.logo a {
+     text-decoration: none;
+     display: block;
 }
