@@ -8,19 +8,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="hero">
-        <div class="logo">
-            <a href="/">
-                <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="Логотип компании">
-            </a>
-        </div>
-        <div class="overlay"></div>
-        <div class="container">
-            <h1>ПРОГРАММИРОВАНИЕ КОНТРОЛЛЕРОВ И ДИСПЕТЧЕРИЗАЦИЯ ACУТП</h1>
-            <p>Увеличьте эффективность и безопасность вашего производства с помощью современных решений на базе ПЛК!</p><br>
-            <a href="#contact" class="btn-primary">Оставить заявку</a>
-        </div>
-    <div class="contact-info">
+
+
+    <!-- Шапка с навигацией -->
+    <header class="top-header">
+        <nav class="nav-links">
+            <a href="#about">О нас</a>
+            <a href="#services">Наши услуги</a>
+            <a href="#how-we-work">Как мы работаем</a>
+            <a href="#why-choose-us">Почему выбирают нас?</a>
+            <a href="#contact">Свяжитесь с нами</a>
+        </nav>
+            <div class="contact-info">
         <div class="contact-text">
             <span class="phone">+7 (911) 233-75-42</span>
             <span class="email">sales@asutp.pro</span>
@@ -31,7 +30,21 @@
         <a href="https://t.me/tatmon13" target="_blank">
             <img src="{{ url_for('static', filename='images/telegram.png') }}" alt="Telegram" class="icon">
         </a>
-    </div>
+        </div>
+        <div class="logo">
+            <a href="/">
+                <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="Логотип компании">
+            </a>
+        </div>
+    </header>
+
+    <header class="hero">
+        <div class="overlay"></div>
+        <div class="container">
+            <h1>ПРОГРАММИРОВАНИЕ КОНТРОЛЛЕРОВ И ДИСПЕТЧЕРИЗАЦИЯ ACУТП</h1>
+            <p>Увеличьте эффективность и безопасность вашего производства с помощью современных решений на базе ПЛК!</p><br>
+            <a href="#contact" class="btn-primary">Оставить заявку</a>
+        </div>
     </header>
 
 <!-- Секция "О нас" -->
@@ -71,7 +84,7 @@
                 </div>
                 <div class="service">
                     <img src="{{ url_for('static', filename='images/scada-system.jpg') }}" alt="Создание SCADA-систем">
-                    <h3>Интеграция SCADA-систем</h3>
+                    <h3>Диспетчериция SCADA-системы</h3>
                     <p>Обеспечиваем возможность удаленного мониторинга и управления технологическими процессами в реальном времени. благодаря таким скада-системам:  WinCC; TIA PORTAL, MasterScada; TraceMode, SimpleScada и др.</p>
                 </div>
                 <div class="service">
@@ -81,7 +94,7 @@
                 </div>
                 <div class="service">
                     <img src="{{ url_for('static', filename='images/training.jpg') }}" alt="Обучение персонала">
-                    <h3>Оптимизация и модернизация</h3>
+                    <h3>Оптимизация и модернизация существующих систем</h3>
                     <p>Улучшаем уже существующие системы автоматизации, добавляя новые функции, повышая производительность и снижая энергозатраты.</p>
                 </div>
             </div>
@@ -126,11 +139,34 @@
         </div>
     </section>
 
+<!-- Секция "Почему выбирают нас" -->
+<section class="why-choose-us" id="why-choose-us">
+    <div class="container">
+        <h2>Почему выбирают нас?</h2>
+        <div class="benefits">
+            <div class="benefit-card">
+                <h3>Бесплатная консультация</h3>
+                <p>0Р – Мы предлагаем первую консультацию бесплатно, чтобы помочь вам оптимизировать производственные процессы.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Снижение затрат на 20%</h3>
+                <p>Наши решения позволяют позволяют уменьшить операционные расходы за счет автоматизации на 20%.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Точно в срок</h3>
+                <p>Мы строго придерживаемся установленных планов и сроков выполнения поставленных задач</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Индивидуальные решения</h3>
+                <p>Мы разрабатываем индивидуальные решения подходящщие именно под ваши нужды и задачи.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 
-
-
+<!-- Секция "Контактная форма" -->
     <section class="contact" id="contact">
         <div class="container">
             <h2>Свяжитесь с нами</h2>
@@ -148,7 +184,8 @@
             </form>
         </div>
     </section>
-<!--Коментарий-->
+
+<!--Секция "Футер"-->
     <footer>
         <div class="container">
             <p>&copy; 2024 Программирование АСУ ТП | Все права защищены</p>

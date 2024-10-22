@@ -7,6 +7,41 @@ body {
     color: #333;
 }
 
+/* Шапка */
+.top-header {
+    background-color: #f9f9f9; /* Используем такой же фон, как в разделе "О нас" */
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 45px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.top-header .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.top-header .nav-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.top-header .nav-links a:hover {
+    color: #ffcc00; /* Цвет при наведении */
+}
+
+
+
+
 .container {
     width: 90%;
     max-width: 990px;
@@ -18,6 +53,7 @@ body {
     background-image: url('/static/images/automation-bg.jpg');
     background-size: cover;
 /*    background-position: center;*/
+    padding-top: 120px; /* отодвигаем хедер вниз */
     background-repeat: no-repeat;
     height: 100vh;
     display: flex;
@@ -46,11 +82,20 @@ body {
 .hero h1 {
     font-size: 3em;
     margin: 0;
+    background-color: rgba(255, 255, 255, 0.2); /* Полупрозрачный белый фон */
+    padding: 20px; /* Внутренний отступ для пространства вокруг текста */
+    border-radius: 10px; /* Скругленные углы */
+    display: inline-block; /* Ограничиваем фон размером текста */
 }
 
 .hero p {
     font-size: 2em;
     margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.2); /* Полупрозрачный белый фон */
+    padding: 10px; /* Внутренний отступ */
+    border-radius: 10px; /* Скругленные углы */
+    display: inline-block; /* Ограничиваем фон размером текста */
+    margin-top: 15px; /* Отступ сверху для разделения элементов */
 }
 
 .btn-primary {
@@ -87,7 +132,7 @@ body {
 }
 
 .about p {
-    font-size: 1.2em;
+    font-size: 1.4em;
     margin-bottom: 100px;
     color: #666;
     text-align: center;
@@ -185,13 +230,11 @@ body {
     color: #666;
 }
 
-
-
-
 /* Секция "Как мы работаем" */
 .how-we-work {
-    padding: 40px 0;
+    padding: 82px 0;
     background-color: #f9f9f9;
+    margin-bottom: 92px;
 }
 
 .how-we-work h2 {
@@ -267,6 +310,56 @@ body {
 
 .btn-primary:hover {
     background-color: #45a049;
+}
+
+
+/* Секция Почему выбирают нас */
+.why-choose-us {
+    background-color: #f4f4f4;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.why-choose-us h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.benefits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.benefit-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+}
+
+.benefit-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.benefit-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.benefit-card p {
+    font-size: 1em;
+    color: #666;
 }
 
 
@@ -396,8 +489,9 @@ footer {
 
 .contact-info .phone,
 .contact-info .email {
-    color: #FFFFFF;
-    font-size: 26px;
+    padding-top: 4px; /* или больше, если нужно больше пространства */
+    color: black;
+    font-size: 22px;
     font-weight: bold;
     z-index: 10;
 }
