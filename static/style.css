@@ -15,7 +15,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 45px 0;
+    padding: 35px 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -38,9 +38,6 @@ body {
 .top-header .nav-links a:hover {
     color: #ffcc00; /* Цвет при наведении */
 }
-
-
-
 
 .container {
     width: 90%;
@@ -120,20 +117,23 @@ body {
 
 /* Секция "О нас"*/
 .about {
-    padding: 20px 0;
+    padding-top: 10px;
+    padding-bottom: 0px;
     background-color: #f9f9f9;
 /*     text-align: left;*/
+    scroll-margin-top: 92px; /* размер шапки */
 }
 
 .about h2 {
     font-size: 2.5em;
-    margin-bottom: 60px;
+    margin-top: 20px;
+    margin-bottom: 40px;
     text-align: center;
 }
 
 .about p {
     font-size: 1.4em;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
     color: #666;
     text-align: center;
 }
@@ -149,6 +149,7 @@ body {
     padding: 10px;
     height: 400px;
     width: 30%;
+    margin-top: 00px;
     margin-bottom: 120px;
     border-radius: 10px;
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1);
@@ -181,14 +182,17 @@ body {
 
 /* Секция услуг */
 .services {
-    padding: 10px 0;
+    padding-top: 10px;
+    padding-bottom: 25px;
     background-color: #C0C0C0;  /*#f9f9f9*/
     text-align: center;
+    scroll-margin-top: 92px; /* размер шапки */
 }
 
 .services h2 {
     font-size: 2.5em;
-    margin-bottom: 40px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .services-list {
@@ -220,26 +224,29 @@ body {
 }
 
 .service h3 {
-    margin-top: 20px;
+    margin-top: 5px;
+    margin-bottom: 0px;
     font-size: 1.5em;
 }
 
 .service p {
     font-size: 1em;
-    margin-top: 10px;
     color: #666;
 }
 
 /* Секция "Как мы работаем" */
 .how-we-work {
-    padding: 82px 0;
+    padding-top: 60px;
+    padding-bottom: 100px;
     background-color: #f9f9f9;
-    margin-bottom: 92px;
+    margin-bottom: 0px;
+    scroll-margin-top: 92px; /* размер шапки */
 }
 
 .how-we-work h2 {
     font-size: 2.5em;
     text-align: center;
+    margin-top: 0px;
     margin-bottom: 40px;
 }
 
@@ -285,6 +292,7 @@ body {
 /* Призыв к действию */
 .call-to-action {
     margin-top: 60px;
+    margin-bottom: 40px;
     width: 100%; /* Полная ширина */
     text-align: center; /* Выровнять содержимое по центру */
 }
@@ -315,9 +323,11 @@ body {
 
 /* Секция Почему выбирают нас */
 .why-choose-us {
-    background-color: #f4f4f4;
-    padding: 60px 0;
+    padding-top: 10px;
+    padding-bottom: 90px;
+    background-color: #C0C0C0;
     text-align: center;
+    scroll-margin-top: 92px; /* размер шапки */
 }
 
 .why-choose-us h2 {
@@ -367,56 +377,77 @@ body {
 
 
 /* Секция контактной формы */
-.contact {
-    background-color: #4CAF50;
-    color: white;
-    padding: 60px 0;
+ .contact {
+    padding-top: 90px;
+    padding-bottom: 130px;
+    background: #f7f9fc; /* фон, аналогичный секции "Как мы работаем" */
+    background-image: url('background-image.jpg'); /* если есть картинка для фона */
+    background-size: cover;
+    background-position: center;
     text-align: center;
-}
+  }
 
-.contact h2 {
-    font-size: 2.5em;
-    margin-bottom: 40px;
-}
-
-form {
+  .contact .container {
     max-width: 600px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    padding: 20px;
+  }
 
-form label {
-    font-size: 1.2em;
-    margin-top: 15px;
-}
+  .contact-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+  }
 
-form input, form textarea {
+  .contact-form .form-group {
+    margin-bottom: 25px;
+  }
+
+  .contact-form label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
     width: 100%;
     padding: 15px;
-    margin-top: 5px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    border: none;
-    font-size: 1em;
-}
+    font-size: 14px;
+  }
 
-form button {
-    margin-top: 20px;
-    padding: 15px 30px;
-    background-color: white;
-    color: #4CAF50;
-    border: none;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-weight: bold;
-    border-radius: 5px;
-}
+  .contact-form textarea {
+    height: 100px;
+    resize: none;
+  }
 
-form button:hover {
-    background-color: #45a049;
+  .submit-btn {
+    background-color: #007bff;
     color: white;
-}
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .submit-btn:hover {
+    background-color: #0056b3;
+  }
+
+  .required {
+    color: red;
+  }
+
+  .required-note {
+    font-size: 12px;
+    margin-top: 10px;
+    color: #666;
+  }
 
 /* Футер */
 footer {
@@ -472,7 +503,7 @@ footer {
 /* Контейнер для контактной информации */
 .contact-info {
     position: absolute;
-    top: 20px;
+    top: 15px;
     right: 20px;
     display: flex;
     align-items: center;
