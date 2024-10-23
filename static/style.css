@@ -36,7 +36,7 @@ body {
 }
 
 .top-header .nav-links a:hover {
-    color: #ffcc00; /* Цвет при наведении */
+    color: #696969; /* Цвет при наведении */
 }
 
 .container {
@@ -51,8 +51,9 @@ body {
     background-size: cover;
 /*    background-position: center;*/
     padding-top: 120px; /* отодвигаем хедер вниз */
+    padding-bottom: 0px;
     background-repeat: no-repeat;
-    height: 100vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -78,8 +79,8 @@ body {
 
 .hero h1 {
     font-size: 3em;
-    margin: 0;
-    background-color: rgba(255, 255, 255, 0.2); /* Полупрозрачный белый фон */
+    margin-top: 470px; /* Отступ сверху для разделения элементов */
+    background-color: rgba(255, 255, 255, 0.4); /* Полупрозрачный белый фон */
     padding: 20px; /* Внутренний отступ для пространства вокруг текста */
     border-radius: 10px; /* Скругленные углы */
     display: inline-block; /* Ограничиваем фон размером текста */
@@ -88,11 +89,12 @@ body {
 .hero p {
     font-size: 2em;
     margin-top: 10px;
-    background-color: rgba(255, 255, 255, 0.2); /* Полупрозрачный белый фон */
+    background-color: rgba(255, 255, 255, 0.4); /* Полупрозрачный белый фон */
     padding: 10px; /* Внутренний отступ */
     border-radius: 10px; /* Скругленные углы */
     display: inline-block; /* Ограничиваем фон размером текста */
     margin-top: 15px; /* Отступ сверху для разделения элементов */
+    margin-bottom: 45px; /* Отступ сверху для разделения элементов */
 }
 
 .btn-primary {
@@ -373,9 +375,6 @@ body {
 }
 
 
-
-
-
 /* Секция контактной формы */
  .contact {
     padding-top: 90px;
@@ -402,6 +401,8 @@ body {
   .contact-form .form-group {
     margin-bottom: 25px;
   }
+
+
 
   .contact-form label {
     display: block;
